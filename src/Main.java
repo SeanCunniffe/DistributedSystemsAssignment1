@@ -10,9 +10,11 @@ import java.rmi.registry.Registry;
 
 public class Main extends Application {
     public static ExamServer server;
-
+    public static int connectToken;
+    public static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) throws Exception{
+        this.primaryStage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
         primaryStage.setTitle("Client");
         primaryStage.setScene(new Scene(root, 300, 275));

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<GridPane fx:id="frame" alignment="center" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints />
@@ -21,9 +21,9 @@
       <rowConstraints>
          <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
       </rowConstraints>
-      <Button fx:id="startQuizButton" mnemonicParsing="false" text="Start quiz" textAlignment="CENTER" GridPane.columnIndex="1" />
+      <Button fx:id="startQuizButton" disable="true" mnemonicParsing="false" onAction="#startQuizHandler" text="Start quiz" textAlignment="CENTER" GridPane.columnIndex="1" />
    </GridPane>
-   <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+   <ListView fx:id="examList" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
    <GridPane>
       <columnConstraints>
          <ColumnConstraints hgrow="SOMETIMES" />
